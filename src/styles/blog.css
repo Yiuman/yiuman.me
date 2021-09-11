@@ -1,0 +1,25 @@
+.blog-block {
+    cursor: pointer;
+    border-radius: .3em;
+    /*text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);*/
+    /*box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 .3em 1em rgba(0, 0, 0, 0.12);*/
+    overflow: hidden;
+    position: relative;
+    transition: color .5s;
+}
+
+.blog-block::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: deeppink;
+    transition: all .5s;
+}
+
+.blog-block:hover::before {
+    left: 0;
+    width: 100%;
+}
